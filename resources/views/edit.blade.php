@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Tutorial Membuat CRUD Pada Laravel - www.malasngoding.com</title>
-</head>
-<body>
- 
-	<h2><a href="https://www.malasngoding.com">www.malasngoding.com</a></h2>
+@extends('master')
+@section('title', 'Edit Data Pegawai')
+
+@section('konten')
 	<h3>Edit Pegawai</h3>
- 
 	<a href="/pegawai"> Kembali</a>
 	
 	<br/>
@@ -17,13 +12,25 @@
 	<form action="/pegawai/update" method="post">
 		{{ csrf_field() }}
 		<input type="hidden" name="id" value="{{ $p->pegawai_id }}"> <br/>
-		Nama <input type="text" required="required" name="nama" value="{{ $p->pegawai_nama }}"> <br/>
-		Jabatan <input type="text" required="required" name="jabatan" value="{{ $p->pegawai_jabatan }}"> <br/>
-		Umur <input type="number" required="required" name="umur" value="{{ $p->pegawai_umur }}"> <br/>
-		Alamat <textarea required="required" name="alamat">{{ $p->pegawai_alamat }}</textarea> <br/>
-		<input type="submit" value="Simpan Data">
+		<div class="form-group">
+            <label class="control-label" for="nama">Nama</label>
+            <input type="text" class="form-control" id="nama" name="nama" value="{{ $p->pegawai_nama }}">
+        </div>
+		<div class="form-group">
+			<label class="control-label" for="jabatan">Jabatan</label>
+			<input type="text" class="form-control" id="jabatan" name="jabatan" value="{{ $p->pegawai_jabatan }}">
+		</div>
+		<div class="form-group">
+			<label class="control-label" for="umur">Umur</label>
+			<input type="number" class="form-control" id="umur" name="umur" value="{{ $p->pegawai_umur }}">
+		</div>
+		<div class="form-group">
+			<label class="control-label" for="alamat">Alamat</label>
+			<textarea class="form-control" id="alamat" name="alamat">{{ $p->pegawai_alamat }}</textarea>
+		</div>
+		<input class="btn btn-primary" type="submit" value="Simpan Data">
 	</form>
 	@endforeach
-		
-</body>
-</html>
+
+
+@endsection
