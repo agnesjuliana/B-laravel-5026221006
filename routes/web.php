@@ -51,3 +51,8 @@ Route::post('/sepedamotor/update','App\Http\Controllers\SepedamotorController@up
 Route::get('/sepedamotor/hapus/{id}','App\Http\Controllers\SepedamotorController@hapus');
 Route::get('/sepedamotor/cari','App\Http\Controllers\SepedamotorController@cari');
 Route::get('/sepedamotor/lihat/{id}','App\Http\Controllers\SepedamotorController@viewSepedamotor');
+
+Route::get('/karyawan','App\Http\Controllers\KaryawanController@index');
+Route::get('/karyawan/tambah','App\Http\Controllers\KaryawanController@tambah');
+Route::post('/karyawan/store','App\Http\Controllers\KaryawanController@store');
+Route::get('/karyawan/hapus/{id}','App\Http\Controllers\KaryawanController@hapus');
