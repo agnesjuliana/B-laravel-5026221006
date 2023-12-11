@@ -42,3 +42,12 @@ Route::get('/keranjangbelanja','App\Http\Controllers\KeranjangController@index')
 Route::get('/keranjangbelanja/tambah','App\Http\Controllers\KeranjangController@tambah');
 Route::post('/keranjangbelanja/store','App\Http\Controllers\KeranjangController@store');
 Route::get('/keranjangbelanja/hapus/{id}','App\Http\Controllers\KeranjangController@hapus');
+
+Route::get('/sepedamotor','App\Http\Controllers\SepedamotorController@index');
+Route::get('/sepedamotor/tambah','App\Http\Controllers\SepedamotorController@tambah');
+Route::post('/sepedamotor/store','App\Http\Controllers\SepedamotorController@store');
+Route::get('/sepedamotor/edit/{id}','App\Http\Controllers\SepedamotorController@edit');
+Route::post('/sepedamotor/update','App\Http\Controllers\SepedamotorController@update');
+Route::get('/sepedamotor/hapus/{id}','App\Http\Controllers\SepedamotorController@hapus');
+Route::get('/sepedamotor/cari','App\Http\Controllers\SepedamotorController@cari');
+Route::get('/sepedamotor/lihat/{id}','App\Http\Controllers\SepedamotorController@viewSepedamotor');
